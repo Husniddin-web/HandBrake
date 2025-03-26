@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./css/style.css" />
+    <style>
+      @keyframes spin {
+        0% {
+          transform: translate(0);
+        }
+
+        50% {
+          transform: translate(800px) rotate(360deg);
+        }
+
+        100% {
+          transform: translate(800px, 300px) rotate(720deg);
+        }
+      }
+
+      .ball {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 55%;
+        left: 0;
+        animation: spin 4s linear infinite;
+      }
+
+      .line {
+        position: absolute;
+        top: 66.6%;
+        left: 0;
+        width: 55%;
+        height: 4px;
+        background: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ball" id="ball">
+      <img
+        src="./images/Adobe Express - file.png"
+        alt="Soccer Ball"
+        class="w-full h-full object-cover"
+      />
+    </div>
+
+    <div class="line"></div>
+  </body>
+</html>
